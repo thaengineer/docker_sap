@@ -59,9 +59,9 @@ RUN mkdir -p /install_media \
 && mkdir -p /run/uuidd
 
 # create users and groups
+# && useradd -g 1000 -G users -m -p 'Qwerty123' -s /usr/bin/csh -u 1000 sapadm \
 RUN groupadd -g 8 mail \
 && groupadd -g 1000 sapsys \
-&& useradd -g 1000 -G users -m -p 'Qwerty123' -s /usr/bin/csh -u 1000 sapadm \
 && useradd -g 1000 -G users -m -p 'Qwerty123' -s /usr/bin/csh -u 1001 hdbadm \
 && useradd -g 1000 -G users -m -p 'Qwerty123' -s /usr/bin/csh -u 1002 devadm \
 && useradd -g 1000 -G users -m -p 'Qwerty123' -s /usr/bin/csh -u 1003 daaadm
